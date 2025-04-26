@@ -1,0 +1,84 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: dark;
+}
+
+body {
+  @apply bg-dark-950 text-dark-50 font-sans antialiased;
+}
+
+.input-field {
+  @apply w-full bg-dark-800 border border-dark-700 rounded-lg px-4 py-3 text-dark-50 
+         focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent
+         transition-all duration-200 placeholder:text-dark-400;
+}
+
+.input-label {
+  @apply block mb-2 text-sm font-medium text-dark-200;
+}
+
+.btn-primary {
+  @apply bg-primary-600 hover:bg-primary-700 text-white font-medium py-3 px-5 rounded-lg 
+         transition-all duration-200 shadow-lg hover:shadow-primary-700/20;
+}
+
+.calculator-card {
+  @apply bg-dark-900 border border-dark-800 rounded-2xl shadow-xl p-6 md:p-8;
+}
+
+.section-title {
+  @apply text-lg font-semibold text-dark-50 mb-4;
+}
+
+.animated-gradient {
+  @apply bg-gradient-to-br from-primary-900 via-primary-800 to-primary-900 
+         bg-size-200 animate-gradient;
+}
+
+@keyframes moveGradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.animate-gradient {
+  animation: moveGradient 6s ease infinite;
+}
+
+.bg-size-200 {
+  background-size: 200% 200%;
+}
+
+.result-card {
+  @apply bg-dark-800 rounded-xl border border-dark-700 p-4 text-center transition-all duration-300;
+}
+
+.result-card:hover {
+  @apply border-primary-600 shadow-md shadow-primary-900/30;
+}
+
+.chart-container {
+  @apply rounded-xl overflow-hidden border border-dark-700 p-4 bg-dark-800;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  @apply w-2;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-dark-800;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-dark-600 rounded-full hover:bg-dark-500;
+}
